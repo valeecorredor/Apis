@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Clima</title>
+    <meta name="description" content="Una aplicación web premium para buscar el clima de tus ciudades favoritas.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="weather-app">
+        <header>
+            <h1>Clima App</h1>
+            <p>Busca el clima de tu ciudad favorita</p>
+        </header>
+        
+        <main>
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Ej: Medellín, Bogotá..." aria-label="Nombre de la ciudad">
+                <button id="searchBtn">Buscar</button>
+            </div>
+            
+            <div id="weatherResult" class="weather-result hidden">
+                <div class="weather-icon" id="weatherIcon"></div>
+                <h2 id="cityName">Ciudad</h2>
+                <div class="temperature">
+                    <span id="tempValue">--</span><span class="celsius">°C</span>
+                </div>
+                <p id="weatherDescription" class="description">Descripción</p>
+            </div>
+
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Buscando...</p>
+            </div>
+
+            <div id="errorMessage" class="error-message hidden">
+                <p>No se encontró la ciudad. Revisa el nombre e intenta de nuevo.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
