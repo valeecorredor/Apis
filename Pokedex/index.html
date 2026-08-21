@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex Moderna</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pokédex</h1>
+            <p>Busca tu Pokémon favorito por nombre o ID</p>
+        </header>
+
+        <main>
+            <form id="search-form" class="search-section">
+                <input type="text" id="pokemon-input" placeholder="Ej. Pikachu o 25" autocomplete="off" required>
+                <button type="submit" id="search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+            </form>
+
+            <div class="history-section" id="history-container">
+                <!-- Los botones de historial se generarán aquí con JavaScript -->
+            </div>
+
+            <div class="generation-section">
+                <select id="gen-select">
+                    <option value="1">Generación 1 (Kanto)</option>
+                    <option value="2">Generación 2 (Johto)</option>
+                    <option value="3">Generación 3 (Hoenn)</option>
+                    <option value="4">Generación 4 (Sinnoh)</option>
+                    <option value="5">Generación 5 (Unova)</option>
+                    <option value="6">Generación 6 (Kalos)</option>
+                    <option value="7">Generación 7 (Alola)</option>
+                    <option value="8">Generación 8 (Galar)</option>
+                    <option value="9">Generación 9 (Paldea)</option>
+                </select>
+                <div class="gen-buttons">
+                    <button type="button" id="gen-search-btn">Ver Aleatorios</button>
+                    <button type="button" id="gen-list-btn">Lista Completa</button>
+                </div>
+            </div>
+
+            <div id="generation-results" class="gen-grid hidden">
+                <!-- Mini cards de la generación se renderizarán aquí -->
+            </div>
+            
+            <div id="generation-list-container" class="list-container hidden">
+                <!-- Lista completa de Pokémon se renderizará aquí -->
+            </div>
+
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Buscando...</p>
+            </div>
+
+            <div id="error-message" class="error hidden">
+                <p>Pokémon no encontrado. Intenta de nuevo.</p>
+            </div>
+
+            <div id="pokedex-card" class="card hidden">
+                <!-- La información del Pokémon se renderizará aquí -->
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
