@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título y meta descripción para SEO -->
+    <title>Galería de Imágenes Dinámica</title>
+    <meta name="description" content="Taller de programación web: Galería interactiva usando Fetch, Async/Await y LocalStorage.">
+    <!-- Fuente moderna de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Galería Interactiva</h1>
+        <p>Explorando APIs con Fetch y Async/Await</p>
+        <!-- Botón para forzar la recarga desde la API (útil para explicar localStorage) -->
+        <button id="btn-reload" class="btn">Recargar Datos (Limpiar Cache)</button>
+    </header>
+
+    <main class="container">
+        <!-- Indicador de carga -->
+        <div id="loader" class="loader">Cargando imágenes...</div>
+        <!-- Contenedor donde se insertarán las tarjetas mediante JavaScript -->
+        <div id="gallery" class="gallery-grid"></div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
